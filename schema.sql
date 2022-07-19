@@ -7,5 +7,6 @@ date_of_birth DATE,
 escape_attempts INT,
 neutered BOOL,
 weight_kg DECIMAL,
-species VARCHAR(50)
 );
+
+ALTER TABLE animals ADD species varchar(50);
