@@ -60,6 +60,36 @@ UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Melody P
  ('Stephanie Mendez',64, DATE '1981-05-04'),
  ('Jack Harkness' , 38, DATE '2008-06-08');
 
+-- Insert data to specializations
 
+ INSERT INTO specializations (vet_id,species_id)
+ VALUES (1,1);
+                    ^
+ INSERT INTO specializations (vet_id,species_id)
+ VALUES (3,1),(3,2),(4,2);
+
+-- Insert data into visist
+
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (1,1,DATE '2020-05-24'),(3,1,DATE '2020-07-22');
  
- 
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (2,5,DATE '2020-05-01'),(2,5,DATE '2020-03-08'),(2,5,DATE '2020-05-14');
+
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (3,3, DATE '2021-05-04'),(4,9,DATE '2021-02-24');
+
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (2,7,DATE '2019-11-21'),(1,7,DATE '2020-08-10'),(2,7,DATE '2021-04-07');
+
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (3,10, DATE '2019-09-29');
+
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (4,8, DATE '2020-10-03'),(4,8, DATE '2020-11-04');
+
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (3,4, DATE '2019-01-24'),(3,4, DATE '2019-05-15'),(3,4, DATE '2020-02-27'),(3,4, DATE '2020-08-03');
+
+INSERT INTO visits (vet_id,animals_id,date_of_visit)
+VALUES (3,6, DATE '2020-05-24'), (1,6, DATE '2021-01-11');
