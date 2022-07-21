@@ -1,5 +1,7 @@
 /* Populate database with sample data. */
 
+-- Insert data into animals
+
 INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
 VALUES ('Agumon',DATE '2020-02-3',0,true,10.23);
 INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
@@ -24,6 +26,7 @@ VALUES ('Angemon',DATE '2005-06-12',1,true,-45);
  INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
 VALUES ('Ditto',DATE '2022-05-14',4,true,22);
 
+-- Insert data into owners
 
 INSERT INTO owners (full_name, age)
 VALUES
@@ -48,6 +51,14 @@ UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Bob') WH
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Melody Pond') WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Melody Pond') WHERE name IN ('Angemon','Boarmon');
 
+
+-- Insert data into vets table 
+
+ INSERT INTO vets (name,age,date_of_graduation)
+ VALUES ('William Tatcher',45 , DATE '2000-04-23'),
+ ('Maisy Smith',26,DATE '2019-01-17'),
+ ('Stephanie Mendez',64, DATE '1981-05-04'),
+ ('Jack Harkness' , 38, DATE '2008-06-08');
 
 
  
