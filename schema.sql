@@ -54,3 +54,15 @@ CREATE TABLE specializations (
  animals_id BIGINT REFERENCES animals (id),
  date_of_visit  DATE
  );
+
+ -- PERFORMENCE TEST PART
+
+-- ADD NEW email COULUMN INSIDE TABLE owners.
+
+ ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- CREATE INDEXES ON COLUMNS TO SPEED UP THE PERFORMENCE.
+CREATE INDEX visits_animals_id_index ON visits(animals_id);
+CREATE INDEX visits_vet_id_index ON visits(vet_id);
+CREATE INDEX owners_email_index ON owners(email);
+CREATE INDEX visits_dateofvisit_index ON visits(date_of_visit);

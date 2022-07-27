@@ -85,5 +85,3 @@ JOIN vets ON vets.id = visits.vet_id
 WHERE vets.name = 'Maisy Smith' GROUP BY animals.species_id ORDER BY count DESC LIMIT 1; 
 
 SELECT species.name FROM species WHERE species.id = 1;
-
-
