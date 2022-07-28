@@ -35,5 +35,10 @@ CREATE TABLE medical_histories_treatments (
  treatments_id BIGINT REFERENCES treatments (id)
  );
 
- 
+ CREATE INDEX medical_histories_patients_id_idx ON medical_histories(patient_id);
+ CREATE INDEX invoices_medical_histories_id_idx ON invoices(medical_histories_id);
+ CREATE INDEX invoices_items_invoice_id_idx ON invoices_items(invoice_id);
+ CREATE INDEX invoices_items_treatment_id_idx ON invoices_items(treatment_id);
+ CREATE INDEX medical_histories_treatments_medical_histories_id_idx ON medical_histories_treatments(medical_histories_id);
+ CREATE INDEX medical_histories_treatments_treatments_id_idx ON medical_histories_treatments(treatments_id);
  
